@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="otzivi.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Отзывы пользователей</h1>
+        <div class="reviews" id="reviews">
+            <!-- Отзывы будут отображаться здесь -->
+        </div>
+        <h2>Оставить отзыв</h2>
+        <form id="reviewForm">
+            <input type="text" id="username" placeholder="Ваше имя (необязательно)">
+            <textarea id="reviewText" placeholder="Напишите ваш отзыв" required></textarea>
+            <div class="emoji-selector">
+                <label>Выберите смайлик:</label>
+                <input type="radio" name="emoji" value="😊" id="emoji1" checked>
+                <label for="emoji1">😊</label>
+                <input type="radio" name="emoji" value="😍" id="emoji2">
+                <label for="emoji2">😍</label>
+                <input type="radio" name="emoji" value="👍" id="emoji3">
+                <label for="emoji3">👍</label>
+            </div>
+            <button type="submit">Опубликовать отзыв</button>
+        </form>
+        <a href="#" id="clearReviewsLink">Очистить отзывы</a>
+        <br>
+        <a href="saitik.html" id="homeLink">На главную</a>
+        
+        <!-- Контейнер для комментариев -->
+        <div id="commentsContainer" class="comments-container">
+            <!-- Здесь будут отображаться комментарии -->
+        </div>
+    </div>
+
+    <script src="otpravka.js"></script>
+</body>
+
+</html>

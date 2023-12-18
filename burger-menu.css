@@ -1,0 +1,71 @@
+/* Стили для бургер-меню */
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+  transition: transform 0.4s;
+}
+
+/* Анимация бургер-меню */
+.change .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .line2 {
+  opacity: 0;
+}
+
+.change .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Скрыть обычное меню на мобильных устройствах */
+.nav-links {
+  display: none;
+}
+
+/* Показать меню при активации бургер-меню */
+.nav-active .nav-links {
+  display: block;
+}
+
+/* Медиа-запрос для показа бургер-меню на мобильных устройствах */
+@media screen and (max-width: 768px) {
+  .burger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+
+  /* Скрыть обычное меню на мобильных устройствах */
+  .navigation {
+    display: none;
+  }
+
+  /* Показать шапку при активации бургер-меню */
+  .header-active {
+    display: block;
+  }
+}
+
+/* Скрыть шапку только на мобильных устройствах */
+@media screen and (max-width: 768px) {
+  .header {
+    display: none;
+  }
+}
+
+/* Показать шапку при активации бургер-меню */
+.header-active {
+  display: block;
+}
+
+

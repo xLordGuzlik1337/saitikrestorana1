@@ -1,0 +1,23 @@
+/* Стили для футера */
+.footer {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .social-icons {
+    margin-bottom: 20px;
+  }
+  
+  .social-icon {
+    color: #ffffff;
+    font-size: 24px;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+  
+  .social-icon:hover {
+    color: #eeeeee;
+  }
+  

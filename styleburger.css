@@ -1,0 +1,70 @@
+/* Стили для мобильной шапки */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    /* Добавьте стили для вашего логотипа */
+  }
+  
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  
+  /* Стили для кнопки меню */
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #333;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Анимация кнопки меню */
+  .menu-open .bar:first-child {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .menu-open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-open .bar:last-child {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  /* Стили для адаптивного меню */
+  .nav-links {
+    display: none;
+  }
+  
+  .nav-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin: 10px 0;
+  }
+  
+  /* Показывать меню при активации */
+  .menu-open .nav-links {
+    display: block;
+  }
+  
+  /* Медиа-запрос для мобильных устройств */
+  @media (max-width: 768px) {
+    /* Поместите стили для мобильных устройств здесь */
+    /* Например, изменения для меню и кнопки */
+  }
+  

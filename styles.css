@@ -1,0 +1,567 @@
+/* Стили для шапки */
+.header {
+  background-color: #70695f96; /* Цвет фона */
+  color: black; /* Цвет текста */
+  padding: 20px 0;
+  margin: 0;
+  text-align: center;
+  position: fixed;
+  width: 100%; /* Растягиваем на всю ширину экрана */
+  left: 0;
+  top: 0;
+  /* Добавляем тень */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 999; /* Помещаем шапку поверх остального контента */
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  width: 100%; /* Растягиваем на всю ширину родительского элемента */
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #ffdb4d; /* Изменяем цвет кнопок при наведении */
+}
+
+/* Для кнопок в контенте */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3366ff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0033cc;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Подвал */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 9999; /* Для убедительности, что подвал поверх других элементов */
+}
+
+/* Для мобильных устройств или экранов с маленькой шириной */
+@media (max-width: 768px) {
+  .footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+}
+
+
+
+.btn:hover {
+  background-color: #0033cc;
+  transform: scale(1.1); /* Увеличиваем размер при наведении */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Добавляем тень */
+}
+
+/* Стили для всплывающего окна */
+.popup-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.popup {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.popup button {
+  padding: 10px 20px;
+  background-color: #3366ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.popup button:hover {
+  background-color: #0033cc;
+}
+
+/* Пример анимации для кнопок навигации */
+.nav-links .btn {
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-links .btn:hover {
+  transform: scale(1.1);
+}
+
+
+/* Пример цветовой палитры */
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  /* Другие цвета по вашему выбору */
+}
+
+/* Ваш файл styles.css */
+
+/* Стили для заднего фона */
+.hero {
+  /* Установка фонового изображения и настройка его свойств */
+  background-image: url('restaurant-449952_1280.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0; /* Добавляем нулевые отступы для body */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+body {
+  margin: 0; /* Установка нулевых отступов */
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .footer {
+    position: relative;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+/* Адаптация для планшетов */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .nav-links {
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .hero {
+    background-size: cover;
+    background-attachment: scroll; /* Изменяем прокрутку фона */
+  }
+}
+/* Стили для кнопок навигации */
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px; /* Увеличим внутренние отступы */
+  border-radius: 20px; /* Более округлые углы */
+  transition: background-color 0.3s ease;
+  background-image: linear-gradient(to right, #ffcc00, #ff6666); /* Градиентный фон */
+}
+
+.nav-links li a:hover {
+  background-color: #ffdb4d; /* Изменение цвета при наведении */
+}
+
+/* Стили для поля поиска */
+.search-box {
+  width: 250px; /* Ширина поля поиска */
+  padding: 8px;
+  border-radius: 20px; /* Более округлые углы */
+  border: 1px solid #ccc; /* Граница */
+  margin-left: 20px; /* Отступ слева */
+  font-size: 14px;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  /* ... (ваш текущий CSS для мобильных устройств) ... */
+
+  /* Изменения для поля поиска на мобильных устройствах */
+  .search-box {
+    width: 80%; /* Изменение ширины поля поиска */
+    margin: 10px auto; /* Центрирование поля поиска */
+  }
+}
+
+/* Стили для иконок социальных сетей */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background-color: #333; /* Цвет фона иконки */
+  color: white; /* Цвет иконки */
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #555; /* Изменение цвета фона при наведении */
+}
+
+.social-icon i {
+  font-size: 20px; /* Размер иконки */
+}
+
+/* Стили для адаптации на мобильных устройствах */
+@media (max-width: 768px) {
+  .social-icons {
+    margin-top: 10px;
+  }
+  
+  .social-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 8px;
+  }
+  
+  .social-icon i {
+    font-size: 16px;
+  }
+}
+/* Стили для новостного раздела */
+.news {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.news h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.news-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.news-item {
+  width: 300px;
+  padding: 20px;
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.news-item h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.news-item p {
+  font-size: 1em;
+  color: #666;
+}
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+  .header {
+    padding: 8px 0;
+  }
+
+  .nav-links li {
+    margin: 5px 0;
+  }
+
+  .nav-links li a {
+    padding: 5px 8px;
+  }
+
+  .news {
+    padding: 30px 10px;
+  }
+
+  .news h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+  }
+
+  .news-item {
+    width: calc(100% - 20px);
+    margin: 10px auto;
+  }
+}
+.dish-card {
+  width: calc(25% - 20px); /* Увеличиваем ширину карточки на десктопе до 25% с учетом отступов */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: #fff;
+}
+.dish-card img {
+  width: 100%;
+  height: 400px; /* Изменяем высоту изображения на нужное вам значение */
+  object-fit: cover; /* Обрезаем изображение по размерам контейнера */
+  border-radius: 10px 10px 0 0; /* Опционально, добавляем скругление углов */
+}
+
+@media screen and (max-width: 1024px) {
+  .dish-card {
+    width: calc(33.33% - 20px); /* Для средних экранов уменьшаем ширину карточек */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dish-card {
+    width: calc(50% - 20px); /* Для меньших экранов карточки будут занимать половину ширины */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .dish-card {
+    width: 100%; /* На самых маленьких экранах карточки будут занимать всю ширину */
+  }
+}
+
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; /* Позволяет шапке быть поверх остального контента */
+}
+/* Дополнительные стили для блока с задним фоном */
+.hero {
+  position: relative;
+  background-image: url('restaurant-449952_1280.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.background-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.shape {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.shape1 {
+  width: 150px;
+  height: 150px;
+  top: 20%;
+  left: 10%;
+  animation: animate1 15s linear infinite alternate;
+}
+
+.shape2 {
+  width: 100px;
+  height: 100px;
+  top: 80%;
+  left: 50%;
+  animation: animate2 18s linear infinite alternate;
+}
+
+.shape3 {
+  width: 80px;
+  height: 80px;
+  top: 50%;
+  left: 80%;
+  animation: animate3 20s linear infinite alternate;
+}
+
+@keyframes animate1 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(50px, 50px) scale(1.2);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(-50px, -50px) scale(1.4);
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(-30px, 30px) scale(1.3);
+  }
+}
+
+.main-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Стили для текста и кнопки */
+.main-content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.main-content p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  text-decoration: none;
+  background-color: #ff4500;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff6347;
+}
+
+/* Обновленные стили для карточек */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  width: calc(55% - 20px); /* Ширина карточек */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #333; /* Цвет заголовка */
+}
+
+.card p {
+  font-size: 1.2em;
+  color: #555; /* Цвет текста */
+}
+
+/* Адаптация карточек для мобильных устройств */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%; /* Ширина карточек занимает большую часть экрана */
+    margin-bottom: 20px; /* Отступ между карточками */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+

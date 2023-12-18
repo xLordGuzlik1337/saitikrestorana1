@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ресторан "Моя Кухня"</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Общие стили */
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+    }
+
+    /* Стили для новостного раздела */
+    .news {
+      background-image: url('cake-1971552_1920.jpg'); /* Подставьте вашу фоновую картинку */
+      background-size: cover;
+      background-position: center;
+      padding: 50px 20px;
+      text-align: center;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .news h2 {
+      font-size: 3em;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+
+    .news-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .news-item {
+      width: calc(33.33% - 40px);
+      margin: 20px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .news-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .news-item h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .news-item p {
+      font-size: 1em;
+      color: #666;
+    }
+
+    /* Стили для кнопок */
+    .buttons {
+      display: flex;
+      margin-top: 30px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      padding: 15px 30px;
+      margin: 0 10px;
+      background-color: #ff3366;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2em;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .buttons a:hover {
+      background-color: #cc0044;
+    }
+
+    /* Адаптация для мобильных устройств */
+    @media (max-width: 768px) {
+      .news {
+        padding: 30px 10px;
+      }
+
+      .news h2 {
+        font-size: 2em;
+        margin-bottom: 15px;
+      }
+
+      .news-item {
+        width: calc(100% - 20px);
+        margin: 10px auto;
+      }
+
+      .buttons {
+        flex-direction: column;
+        margin-top: 20px;
+      }
+
+      .buttons a {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <!-- Новостной раздел -->
+    <section id="news" class="news">
+      <h2>Последние новости</h2>
+      <div class="news-list">
+        <div class="news-item">
+          <h3>Мы открылись</h3>
+          <p>Мы очень рады что открылись мы будем вас радовать в любой день недели.</p>
+        </div>
+        <div class="news-item">
+          <h3>Набор в команду</h3>
+          <p>Ищем Шев-повара и другой персонал в наш ресторан .</p>
+        </div>
+        <!-- Добавьте другие новости здесь -->
+      </div>
+      
+
+      <!-- Кнопка для перехода на сайт -->
+      <div class="buttons">
+        <a href="saitik.html">На главную</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <!-- Содержимое подвала -->
+  </footer>
+</body>
+
+</html>

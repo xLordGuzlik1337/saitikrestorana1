@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ресторан "Моя Кухня"</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="burger-menu.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Общие стили */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Стили для заднего фона */
+    .hero {
+      background-image: url('restaurant-449952_1280.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+      /* Небольшие отступы по бокам */
+      position: relative;
+    }
+    /* Стили для новых разделов */
+    /* Раздел Уникальные рецепты */
+    
+
+    .hero h1 {
+      display: none;
+      /* Удаляем текст "Добро пожаловать" */
+    }
+
+    .hero h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1em;
+    }
+
+    /* Стили для раздела мероприятий */
+    .events {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .event-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .event {
+      width: calc(33.33% - 40px);
+      margin: 20px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .event:hover {
+      transform: translateY(-5px);
+    }
+
+    .event h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .event p {
+      font-size: 1em;
+    }
+
+    /* Адаптация для мобильных устройств */
+    @media (max-width: 768px) {
+      .events {
+        padding: 30px 10px;
+      }
+
+      .event {
+        width: calc(100% - 20px);
+        margin: 10px auto;
+      }
+    }
+  </style>
+</head>
+  
+
+<body>
+  <header class="header">
+    <nav class="navigation">
+      <ul class="nav-links">
+        <!-- Добавим кнопку для вызова формы -->
+        <li><a href="menu.html" class="btn">Меню</a></li>
+        <li><a href="about.html" class="btn">Наша команда</a></li>
+        <li><a href="voprosi.html" class="btn">Частые вопросы</a></li>
+        <li><a href="novosti.html" class="btn">Новости</a></li>
+        <li><a href="otzivi.html" class="btn">Отзывы</a></li>
+        <!-- Добавляем кнопку авторизации -->
+      </ul>
+    </nav>
+
+  </header>
+  <div class="burger">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+  </div>
+  <main>
+    <section id="home" class="hero">
+      <div class="card-container">
+        <div class="card">
+          <h3>Специальное предложение</h3>
+          <p>Закажите сегодня и получите скидку 20%</p>
+          <p>А так же получите в подарок купон ещё на одну скидку </p>
+        </div>
+        <div class="card">
+          <h3>Новое меню</h3>
+          <p>Попробуйте наши новые блюда</p>
+        </div>
+        <!-- Добавьте другие карточки по вашему усмотрению -->
+      </div>
+    </section>
+    
+    <footer class="footer">
+      <!-- Иконки социальных сетей -->
+      <div class="social-icons">
+        <a href="https://vk.com/ahahasanechka" class="social-icon"><i class="fab fa-vk"></i></a>
+        <a href="https://www.youtube.com/channel/UCPkKbC6XpBxFPG0ZoKid3FQ" class="social-icon"><i
+            class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/ahahasanechka/" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="tel:+1234567890" class="social-icon"><i class="fas fa-phone"></i></a>
+        <a href="mailto:example@example.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+
+      </div>
+
+      <p>© 2023 Ресторан "Моя Кухня". Все права защищены.</p>
+    </footer>
+
+    <script src="./burger.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+

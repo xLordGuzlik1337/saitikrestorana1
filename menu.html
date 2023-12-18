@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Меню</title>
+  <link rel="preload" href="pexels-roman-odintsov-4551832.jpg" as="image">
+
+   <!-- Предварительная загрузка изображений -->
+   <link rel="preload" href="food-3337656_640.jpg" as="image">
+   <link rel="preload" href="371ca16f9a887e4a7d2c90c17ebaab77.jpg" as="image">
+   <link rel="preload" href="584006059d5b9ba8c3b3560055c37a90.jpg" as="image">
+   <link rel="preload" href="7072a7cb747d63a72f7c96c571bbb9c2.jpg" as="image">
+   <link rel="preload" href="burger-3047550_640.jpg" as="image">
+   <link rel="preload" href="234592f8ab997369dd2bd20ad04e61df.jpg" as="image">
+   <link rel="preload" href="6516320288347632e65f2ce5b0627810.jpg" as="image">
+   <link rel="preload" href="sok.jpg" as="image">
+   <link rel="preload" href="nap.jpg" as="image">
+   <link rel="preload" href="kakao.jpg" as="image">
+
+   <!-- Добавьте предварительную загрузку для других изображений -->
+ 
+
+<!-- Остальной HTML и код JavaScript -->
+
+  <!-- Подключение стилей -->
+<style>
+  /* Ваши стили здесь */
+ /* Стили для заднего фона */
+ .hero {
+      background-image: url('restaurant-449952_1280.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+      /* Небольшие отступы по бокам */
+      position: relative;
+    }
+    /* Стили для новых разделов */
+    /* Раздел Уникальные рецепты */
+    
+
+    .hero h1 {
+      display: none;
+      /* Удаляем текст "Добро пожаловать" */
+    }
+
+    .hero h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1em;
+    }
+  header {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+    backdrop-filter: blur(10px); /* Применение размытия к фону шапки */
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .go-back {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #444;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .go-back:hover {
+    color: #000;
+  }
+
+  main {
+  padding: 20px;
+  overflow-x: hidden; /* Добавляем свойство для скрытия горизонтальной прокрутки */
+}
+
+
+  .search-bar input[type="text"] {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  .filter-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .filter-controls label {
+    font-size: 16px;
+    color: #555;
+    margin-right: 10px;
+  }
+
+  .filter-controls select {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+  }
+
+  .dish-card {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: #fff;
+  }
+
+  .dish-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .dish-card {
+  width: calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.dish-card:hover {
+  transform: translateY(-5px);
+}
+
+.dish-card img {
+  width: 100%; /* Изменяем ширину изображения на 100% */
+  height: auto; /* Позволяет изображению сохранять пропорции */
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+
+.dish-details {
+  padding: 15px;
+  border-radius: 0 0 10px 10px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: normal;
+  line-height: 1.4;
+  overflow: hidden;
+}
+
+.dish-details h3,
+.dish-details p {
+  margin: 0; /* Сброс внутренних отступов у заголовков и параграфов */
+  padding: 0; /* Сброс внутренних отступов у заголовков и параграфов */
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  /* Стили для планшетов и больших телефонов в горизонтальной ориентации */
+  .dish-card {
+    width: calc(50% - 20px); /* Изменяем ширину на 50% для планшетов */
+    max-width: calc(50% - 20px); /* Изменяем максимальную ширину */
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Стили для мобильных устройств */
+  .dish-card {
+    width: calc(100% - 20px); /* Изменяем ширину на 100% для мобильных устройств */
+    max-width: calc(100% - 20px); /* Изменяем максимальную ширину */
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Дополнительные стили для узких мобильных устройств */
+  .dish-card {
+    width: calc(100% - 10px); /* Изменяем ширину на 100% для очень узких мобильных устройств */
+    max-width: calc(100% - 10px); /* Изменяем максимальную ширину */
+    margin-bottom: 10px;
+  }
+
+  .dish-details {
+    padding: 10px; /* Уменьшаем внутренний отступ */
+  }
+
+  .dish-details h3,
+  .dish-details p {
+    margin: 5px 0; /* Уменьшаем отступы у заголовков и параграфов */
+  }
+}
+
+
+</style>
+
+</head>
+<body>
+  <header>
+    <a href="saitik.html" class="go-back">На главную</a>
+    <h1>Наше меню</h1>
+  </header>
+
+  <main>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Поиск по названию блюда">
+    </div>
+
+    <div class="filter-controls">
+      <label for="categoryFilter">Фильтр по категории:</label>
+      <select id="categoryFilter">
+        <option value="all">Все блюда</option>
+        <option value="pizza">Пицца</option>
+        <option value="burger">Бургеры</option>
+        <option value="drinks">Напитки</option> <!-- Добавлен раздел для напитков -->
+        <!-- Добавьте другие категории по необходимости -->
+      </select>
+    </div>
+
+    <div class="menu-list">
+      <!-- Карточки для блюд -->
+    </div>
+  </main>
+
+  <!-- Подключение скрипта -->
+  <script>
+    function displayMenu(dishesList) {
+      const menuList = document.querySelector('.menu-list');
+      menuList.innerHTML = '';
+
+      dishesList.forEach((dish) => {
+        const dishElement = document.createElement('div');
+        dishElement.classList.add('dish-card');
+
+        dishElement.innerHTML = `
+          <img src="${getImagePath(dish.category, dish.name)}" alt="${dish.name}">
+          <div class="dish-details">
+            <h3>${dish.name}</h3>
+            <p>${getDescription(dish.category)}</p>
+            <p>Цена: ${dish.price} руб.</p>
+            <!-- Другая информация о блюде -->
+          </div>
+        `;
+        menuList.appendChild(dishElement);
+      });
+    }
+
+    // Функция для получения пути к изображению в зависимости от категории и имени блюда
+    function getImagePath(category, dishName) {
+  const pizzaImages = {
+    'сырная пицца': 'food-3337656_640.jpg',
+        'маргарита': '371ca16f9a887e4a7d2c90c17ebaab77.jpg',
+        'пепперони': '584006059d5b9ba8c3b3560055c37a90.jpg',
+        'вегетарианская пицца': '7072a7cb747d63a72f7c96c571bbb9c2.jpg',
+    // ... (изображения для пиццы)
+  };
+
+  const burgerImages = {
+    'бургер': 'burger-3047550_640.jpg',
+        'чизбургер': '234592f8ab997369dd2bd20ad04e61df.jpg',
+        'гриль-бургер': '6516320288347632e65f2ce5b0627810.jpg',
+    // ... (изображения для бургеров)
+  };
+
+  const drinkImages = {
+    'фруктовый сок': 'sok.jpg',
+    'Молочный коктейль' : 'nap.jpg',
+    'какао': 'kakao.jpg'
+    // Добавьте другие изображения для напитков
+  };
+  
+
+  if (category.toLowerCase() === 'pizza') {
+    return pizzaImages[dishName.toLowerCase()] || 'food-3337656_640.jpg';
+  } else if (category.toLowerCase() === 'burger') {
+    return burgerImages[dishName.toLowerCase()] || 'food-3337656_640.jpg';
+  } else if (category.toLowerCase() === 'drinks') { // Добавлена проверка на категорию "drinks"
+    return drinkImages[dishName.toLowerCase()] || 'nap.jpg'; // Указано изображение по умолчанию для напитков
+  } else {
+    return 'default-image.jpg'; // Изображение по умолчанию для других категорий
+  }
+}
+
+    // Функция для получения описания в зависимости от категории
+    function getDescription(category) {
+      if (category.toLowerCase() === 'pizza') {
+        return 'Вкусная пицца с разнообразными начинками.';
+      } else if (category.toLowerCase() === 'burger') {
+        return 'Сочный бургер с аппетитной котлетой и овощами.';
+      } else {
+        return 'Вкусный напиток';
+      }
+    }
+
+    // Массив с блюдами
+    const dishes = [
+  { name: 'Сырная пицца', price: 350, category: 'pizza' },
+  { name: 'Бургер', price: 450, category: 'burger' },
+  { name: 'Маргарита', price: 320, category: 'pizza' },
+  { name: 'Пепперони', price: 380, category: 'pizza' },
+  { name: 'Чизбургер', price: 420, category: 'burger' },
+  { name: 'Вегетарианская пицца', price: 370, category: 'pizza' },
+  // Добавлены напитки
+  { name: 'Фруктовый сок', price: 150, category: 'drinks' },
+  { name: 'Молочный коктейль', price: 140, category: 'drinks' },
+  { name: 'Какао', price: 140, category: 'drinks' },
+  
+  
+  
+  // Добавьте другие напитки с категорией 'drinks'
+];
+
+      // Добавьте другие блюда с соответствующими категориями
+
+    // Функция для фильтрации блюд по категории "пицца"
+    function filterByPizza() {
+      const filteredDishes = dishes.filter((dish) =>
+        dish.category.toLowerCase() === 'pizza'
+      );
+      displayMenu(filteredDishes);
+    }
+
+    // Обработчик события для кнопки фильтрации пиццы
+    document.getElementById('categoryFilter').addEventListener('change', () => {
+      const selectedCategory = document.getElementById('categoryFilter').value;
+      let filteredDishes = dishes;
+
+      if (selectedCategory !== 'all') {
+        filteredDishes = dishes.filter((dish) =>
+          dish.category.toLowerCase() === selectedCategory
+        );
+      }
+
+      displayMenu(filteredDishes);
+    });
+
+    // Функция для фильтрации блюд по поиску
+    function filterBySearch() {
+      const searchInput = document.getElementById('searchInput').value.toLowerCase().trim();
+      const filteredDishes = dishes.filter((dish) =>
+        dish.name.toLowerCase().includes(searchInput)
+      );
+      displayMenu(filteredDishes);
+    }
+
+    // Обработчик события для поля ввода поиска
+    document.getElementById('searchInput').addEventListener('input', filterBySearch);
+
+    // При загрузке страницы отображаем все блюда в меню
+    displayMenu(dishes);
+  </script>
+</body>
+</html>
+<!-- ... (ваш предыдущий HTML код) ... -->
+
+
+
+
+

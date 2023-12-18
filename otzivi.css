@@ -1,0 +1,170 @@
+/* Базовые стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    margin-top: 30px;
+    color: #333;
+}
+
+/* Стили для отзывов */
+.review {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+}
+
+.review strong {
+    font-weight: bold;
+    color: #555;
+}
+
+.review span {
+    margin-left: 5px;
+}
+
+/* Стили для формы отзыва */
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.emoji-selector {
+    margin-bottom: 15px;
+}
+
+label {
+    margin-right: 8px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+/* styles.css */
+
+/* Общие стили для страницы */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1 {
+    text-align: center;
+    color: #008080;
+}
+
+h2 {
+    margin-top: 30px;
+    color: #008080;
+}
+
+/* Стили для формы отзывов */
+#reviewForm {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+textarea {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.emoji-selector {
+    margin-bottom: 15px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+button {
+    background-color: #008080;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005555;
+}
+
+/* Стили для отображения комментариев */
+.comments-container {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.review {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.review:last-child {
+    border-bottom: none;
+}
+
+

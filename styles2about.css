@@ -1,0 +1,98 @@
+/* styles.css */
+
+/* Задний фон */
+body {
+    background-image: url('9d47a48954ceac24f44483900da8024e.jpg'); /* Замените на вашу красивую картинку */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white; /* Цвет текста */
+  }
+  
+  /* Стили для секции "О нас" */
+  #about {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  /* Стили для заголовка */
+  h1 {
+    font-size: 3em;
+  }
+  
+  /* Стили для текста */
+  p {
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+  
+  /* Стили для блока команды */
+  #team {
+    margin-top: 50px;
+  }
+  
+  /* Стили для блока сотрудника */
+  .employee {
+    display: inline-block;
+    width: 250px;
+    margin: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.5); /* Прозрачный белый фон */
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease; /* Плавное изменение при наведении */
+  }
+  
+  /* При наведении увеличиваем блок сотрудника */
+  .employee:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Стили для изображения сотрудника */
+  .employee img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Для круглой формы */
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease; /* Плавное изменение при наведении */
+  }
+  
+  /* При наведении увеличиваем изображение */
+  .employee:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Стили для имени сотрудника */
+  .employee h3 {
+    font-size: 1.5em;
+  }
+  
+  /* Стили для должности сотрудника */
+  .employee p {
+    font-style: italic;
+  }
+  
+  /* styles2about.css */
+  
+  /* Стили для кнопки на главную */
+  .top-button {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Стили для кнопки */
+  .main-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #FF6347; /* Цвет кнопки */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .main-button:hover {
+    background-color: #FF4500; /* Изменение цвета кнопки при наведении */
+  }
+  
